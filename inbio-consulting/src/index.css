@@ -1,0 +1,4 @@
+/* Global reset and theme variables are handled in styles.scss */
+html, body, #root {
+  height: 100%;
+}

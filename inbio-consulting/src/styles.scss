@@ -1,0 +1,119 @@
+@use "sass:map";
+
+/* Bootstrap base */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* Libraries */
+@import "aos/dist/aos.css";
+@import "swiper/swiper-bundle.min.css";
+
+/* Root variables */
+:root {
+  --color-primary: #6f3cff;
+  --color-secondary: #ff7a59;
+  --color-bg: #0f0f16;
+  --color-surface: #151520;
+  --color-text: #d7d7e0;
+  --color-muted: #8b8b98;
+  --radius: 16px;
+  --shadow-elev: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Poppins", "Inter", system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container-narrow {
+  max-width: 1040px;
+}
+
+.section {
+  position: relative;
+  padding: 100px 0;
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: var(--color-muted);
+  margin-bottom: 2.5rem;
+}
+
+.card-surface {
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-elev);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn-outline-primary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn-outline-primary:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.sticky-top-blur {
+  backdrop-filter: blur(10px);
+  background: rgba(15, 15, 22, 0.6);
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Theme toggle */
+body.light-theme {
+  --color-bg: #ffffff;
+  --color-surface: #f6f7fb;
+  --color-text: #1a1b1f;
+  --color-muted: #5b5e66;
+}
+
+/* Hero */
+.hero {
+  padding-top: 140px;
+}
+.hero-title {
+  font-size: clamp(2rem, 4vw + 1rem, 3.25rem);
+}
+.badge-pill {
+  border-radius: 999px;
+}
+
+/* Utilities */
+.opacity-75 { opacity: .75; }
+.opacity-50 { opacity: .50; }
+.z-1 { z-index: 1; }
+.z-2 { z-index: 2; }
+.z-3 { z-index: 3; }
+
