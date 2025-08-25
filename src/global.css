@@ -1,0 +1,45 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-section {
+  height: 100vh;
+  background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+  color: #fff;
+  position: relative;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-item .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  opacity: 0;
+  transition: opacity .3s;
+  border-radius: .5rem;
+}
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
